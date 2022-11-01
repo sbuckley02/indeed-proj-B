@@ -1,1 +1,4 @@
+# add all files here that you don't want to push to Github (sensitive data, modules you downloaded)
+
 node_modules
+.env

@@ -7,8 +7,23 @@
 // Import libraries
 const express = require('express');
 const cors = require('cors');
+const mongoose = require('mongoose');
+// import os;
 
-mongoose.connect('mongodb://localhost:4000');
+// mongoose.connect('mongodb://localhost:4000');
+
+// password = os.environ.get('DB_PASSWORD');
+// console.log(password);
+
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://admin:awpoing2i-048gnw@indeedbcluster.sp9r8xb.mongodb.net/?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+
 
 // Create the Express app
 const app = express();

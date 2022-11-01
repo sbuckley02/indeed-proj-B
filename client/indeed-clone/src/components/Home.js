@@ -25,7 +25,7 @@ function Home() {
 		<div>
 			<h2>Indeed Clone</h2>
 			<p>This text can be found in the nested component "Home". You're gonna want to change this text when you're able to</p>
-			<p>Here's something cool - the following text is retreived from the back-end:</p>
+			<p>Here's something cool - the following text is retrieved from the back-end:</p>
 			<code>{sampleBackendText}</code>
 			<p>If you see <code>null</code> above, it means it didn't work. That likely means that you don't have the
 				back-end running on a separate port on your computer. If you see something else (no spoilers), it's working</p>
