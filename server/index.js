@@ -8,6 +8,8 @@
 const express = require('express');
 const cors = require('cors');
 
+mongoose.connect('mongodb://localhost:4000');
+
 // Create the Express app
 const app = express();
 const PORT = 4000;

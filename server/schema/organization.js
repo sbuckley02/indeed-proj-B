@@ -12,7 +12,7 @@ var organizationSchema = mongoose.Schema({
     },
     username: {
         type: String,
-        reuqired: true
+        required: true
     },
     password: {
         type: String,
