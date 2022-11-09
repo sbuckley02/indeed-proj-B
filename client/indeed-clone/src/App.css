@@ -24,11 +24,36 @@
 .App-link {
   color: #61dafb;
 }
+ 
+.login{
+  background-color: #d3cac2;
+  border-style: solid;
+  margin: 5%;
+  border-radius: 5px;
+  padding: 70px;
+}
+.loginheader {
+  color: black;
 
-.login-btn {
-  background-color: #598fc5;
 
-
+}
+.login h1 {
+  color: white;
+  text-align: center;
+  padding-bottom: 20px;
+  
+}
+.login input{
+  height: 40 px;
+  width: 150px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.login span{
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  margin-right: 3px;
 }
 
 .InputInfo {

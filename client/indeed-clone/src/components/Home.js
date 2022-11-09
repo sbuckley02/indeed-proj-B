@@ -32,7 +32,6 @@ function Home() {
 				<p>If you see <code>null</code> above, it means it didn't work. That likely means that you don't have the
 					back-end running on a separate port on your computer. If you see something else (no spoilers), it's working</p>
 			</div> */}
-			<ClubApp />
 		</>
 	)
 }
