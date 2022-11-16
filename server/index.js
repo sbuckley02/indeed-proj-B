@@ -16,7 +16,7 @@ const mongoose = require('mongoose');
 // console.log(password);
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://admin:awpoing2i-048gnw@indeedbcluster.sp9r8xb.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://admin:webd3vIndeed8rojB@indeedbcluster.sp9r8xb.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 client.connect(err => {
   const collection = client.db("test").collection("devices");
