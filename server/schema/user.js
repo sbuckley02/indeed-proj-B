@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 var userSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
-    
+
     // Basic Information
     firstName: {
         type: String,
@@ -16,7 +16,7 @@ var userSchema = mongoose.Schema({
     },
     username: {
         type: String,
-        reuqired: true
+        required: true
     },
     password: {
         type: String,
@@ -31,14 +31,14 @@ var userSchema = mongoose.Schema({
     city: String,
     state: String,
     zipCode: String,
-    
+
     // Applicant Information
     resume: String,
     experience: Array,
     positionsApplied: Array,
     linkedin: String,
     profilePicture: Buffer,
-    created: { 
+    created: {
         type: Date,
         default: Date.now
     }

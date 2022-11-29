@@ -4,26 +4,31 @@ const Schema = mongoose.Schema;
 
 var applicationSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
-    
+
     // Job Information
-    jobId: String,
-    jobTitle: String,
+    positionId: String,
+    positionTitle: String,
     organizationName: String,
+    orgType: String,
     postingDate: String,
     semester: String,
+    timeCommitment: String,
+    meetingType: String,
+    dues: Boolean,
+
     paid: Boolean,
     payRate: String,
-    
-    // Dynamic Array 
+
+    // Dynamic Array
     applicationQuestions: {
         type: Array
     },
-    
+
     // Resume Field
-    resume: String;
-    
+    resume: String,
+
     profilePicture: Buffer,
-    created: { 
+    created: {
         type: Date,
         default: Date.now
     }

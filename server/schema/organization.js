@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
-mongoose.connect('mongodb://admin:webd3vIndeed8rojB@host:port/database?options...');
+mongoose.connect('mongodb://admin:`webd3vIndeed8rojB`@host:port/database?options...');
 const Schema = mongoose.Schema;
 
 var organizationSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
-    
+
     // Basic Information
     organizationName: {
         type: String,
@@ -12,18 +12,19 @@ var organizationSchema = mongoose.Schema({
     },
     username: {
         type: String,
-        reuqired: true
+        required: true
     },
     password: {
         type: String,
         required: true
     },
+    about: String,
     website: String,
-    twitter: String,
+    instagram: String,
     facebook: String,
     linkedin: String,
     profilePicture: Buffer,
-    created: { 
+    created: {
         type: Date,
         default: Date.now
     }

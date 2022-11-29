@@ -12,6 +12,10 @@ const cors = require('cors');
 const app = express();
 const PORT = 4000;
 
+// Create MongoDB Connection
+const mongodb = require('mongodb');
+
+
 // Don't worry about this
 app.use(cors());
 
