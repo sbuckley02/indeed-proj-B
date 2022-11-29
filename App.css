@@ -1,0 +1,112 @@
+.App {
+  /*text-align: center; */
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightgrey;
+ 
+ 
+  
+}
+
+.searchBar {
+  border-style: ridge;
+}
+
+#search, #where {
+ 
+  margin-top: 100px;
+  border-radius: 5px;
+  width: 200px;
+  height: 30px;
+  border-style: ridge;
+  padding-left: 50px;
+
+  
+}
+
+#searchLabel {
+  margin-right: 5px;
+  padding-left: 250px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+#whereLabel {
+  margin-right: 5px;
+  padding-left: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+#searchButton {
+  height: 30px;
+  width: 100px;
+  margin-left: 70px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+  background-color: #2F3180;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #2F3180;
+}
+
+#resume, #employer {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 100;
+  padding-top: 10px;
+  
+}
+
+#resumeLabel, #employerLabel {
+
+  font-weight: bold;
+  color: #2F3180;
+
+}
+
+#jobFeed {
+  text-align: center;
+}
+
+.job {
+  border-style: solid;
+  margin: 25px;
+  border-radius: 5px;
+}
+
+.jobTitle, .jobCompany, .jobLocation, .jobDetail {
+  margin-left: 5px;
+}
+
+.jobTitle {
+  text-decoration: underline;
+}
+ .jobDetail {
+  display: inline;
+  border-style: solid;
+  border-radius: 5px;
+  background-color:#2F3180;
+  border-color: #2F3180;
+  color: white;
+  padding: 5px
+  
+}
+
+.job-grid {
+
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+
+
+
+
+
+
+
