@@ -1,64 +1,79 @@
-const Background= () => {
-    return (
-        <div className="background">
-            <div className="input divider">
-                <form>
-                    <label>Club Name:</label>
-                    <input type="text" className ="inputbuttons"></input>
-                </form>
-                <form>
-                    <label>Job Title:</label>
-                    <input type="text" className ="inputbuttons"></input>
-                </form>
-                <form>
-                    <label>Location (Main Campus, France, etc.):</label>
-                    <input type="text" className ="inputbuttons"></input>
-                </form>
-                <p>Attendance Type:</p>
-                <form action="/action_page.php">
-                    <input type="checkbox" id ="Hybrid"></input>
-                    <lable for="Hybrid">Hybrid</lable>
-                    <br></br>
-                    <input type="checkbox" id ="Online"></input>
-                    <lable for="Online">Online</lable>
-                    <br></br>
-                    <input type="checkbox" id ="Both"></input>
-                    <lable for="Both">Both</lable>                
-                </form>
-            </div>
-            <div className = "description"> 
-                <form>
-                    <label className = "descriptiontext">Include a Club Description:</label>
-                    <input type="text" className ="inputbuttons"></input>
-                </form>
-            </div>
-            <div className="input divider">
-            </div>
-            <div className="input divider">
-                <form>
-                    <label>Hours per Week/Schedule:</label>
-                    <input type="text" className ="inputbuttons"></input>
-                </form>
-                <form>
-                    <label>Number of Openings:</label>
-                    <input type="text" className ="inputbuttons"></input>
-                </form>
-                <form>
-                    <label>Building Location:</label>
-                    <input type="text" className ="inputbuttons"></input>
-                </form>
-                <form>
-                    <label>Deadline to Apply:</label>
-                    <input type="text" className ="inputbuttons"></input>
-                </form>
-            </div>
-            <div className = "description"> 
-                <form>
-                    <label className = "descriptiontext">Include a Position Description:</label>
-                    <input type="text" className ="inputbuttons"></input>
-                </form>
-            </div>
-        </div>
-    )
+import React, { useReducer, useState } from 'react';
+const formReducer = (state, event) => {
+    return {
+      ...state,
+      [event.name]: event.value
+    }
+   }
+
+function Background() {
+  const [formData, setFormData] = useReducer(formReducer, {});
+  const [submitting, setSubmitting] = useState(false);
+  const handleSubmit = event => {
+    event.preventDefault();
+   setSubmitting(true);
+
+ }
+ const handleChange = event => {
+    setFormData({
+      name: event.target.name,
+      value: event.target.value,
+    });
+  }
+
+  return(
+    <div className="wrapper">
+      <h1 className = "middle">Job application listing</h1>
+      {submitting &&
+       <div className = "middle">
+         You are submitting the following:
+         <ul>
+           {Object.entries(formData).map(([name, value]) => (
+             <li key={name}><strong>{name}</strong>:{value.toString()}</li>
+           ))}  
+         </ul>
+       </div>
+
+     }
+      <form className ="middle" onSubmit={handleSubmit}>
+        <fieldset>
+          <label>
+            <p>Club Name:</p>
+            <input name="orgName" onChange={handleChange} required/>
+          </label>
+          <label>
+            <p>Position Title:</p>
+            <input name="jobTitle" onChange={handleChange} required/>
+          </label>
+          <label>
+            <p>Organization Type:</p>
+            <input name="orgType" onChange={handleChange} required/>
+          </label>
+          <label>
+            <p>Club Description:</p>
+            <input name="orgDescription" onChange={handleChange} required/>
+          </label>
+          <label>
+            <p>Job Description:</p>
+            <input name="jobdescription" onChange={handleChange} required/>
+          </label>
+          <label>
+            <p>Posting Date:</p>
+            <input name="postingDate" onChange={handleChange} required/>
+          </label>
+          <label>
+            <p>Time Commitment:</p>
+            <input name="timeCommitment" onChange={handleChange} required/>
+          </label>
+          <label>
+            <p>Meeting Type</p>
+            <input name="meetingType" onChange={handleChange} required/>
+          </label>
+        </fieldset>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  )
 }
-export default Background
+
+export default Background;
